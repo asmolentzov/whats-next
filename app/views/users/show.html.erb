@@ -1,5 +1,11 @@
 <h2>Things I Like</h2>
 
+<div id="books-likes">
+  <% @books.each do |book| %>
+    <%= book.name %>
+  <% end %>
+</div>
+
 <%= form_tag do %>
   <%= label_tag :item_name %>
   <%= text_field_tag :item_name %>
