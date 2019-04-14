@@ -3,7 +3,7 @@ require 'rails_helper'
 describe Item do
   describe 'Validations' do
     it { should validate_presence_of(:name) }
-    it { should validate_presence_of(:type) }
+    it { should validate_presence_of(:item_type) }
   end
   
   describe 'Relationships' do
