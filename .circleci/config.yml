@@ -6,6 +6,7 @@ version: 2
 jobs:
   build:
     docker:
+      working_directory: ~/whats-next
       # specify the version you desire here
       - image: circleci/ruby:2.4.5-node-browsers
         environment: # environment variables for primary container
@@ -18,8 +19,6 @@ jobs:
             POSTGRES_USER: circleci
             POSTGRES_DB: whats-next_test
             POSTGRES_PASSWORD: ""
-
-    working_directory: ~/repo
 
     steps:
       - checkout
