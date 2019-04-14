@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'As a user on the site' do
   describe 'on the main page' do
     it 'can add a new item to my Things I Like' do
-      user = User.create(name: 'user')
+      user = User.create(name: 'user', password: 'pass')
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       visit profile_path(user)
       

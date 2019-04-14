@@ -10,6 +10,12 @@
   </head>
 
   <body>
+    <nav>
+      <h1>What's Next</h1>
+      <% if current_user %>
+        <h5><%= current_user.name %></h5>
+      <% end %>
+    </nav>
     <%= yield %>
   </body>
 </html>
