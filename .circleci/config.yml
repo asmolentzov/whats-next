@@ -6,19 +6,24 @@ version: 2
 jobs:
   build:
     docker:
+      # specify the version you desire here
       - image: circleci/ruby:2.4.5-node-browsers
-        environment: # environment variables for primary container
-            PGUSER: circleci
-            PGHOST: 127.0.0.1
-            RAILS_ENV: test
-            DATABASE_URL: postgres://localhost/whats-next_test
-        - image: circleci/postgres # database image
-          environment: # environment variables for database
-            POSTGRES_USER: circleci
-            POSTGRES_DB: whats-next_test
-            POSTGRES_PASSWORD: ""
+        environment:
+          PGUSER: circleci
+          PGHOST: 127.0.0.1
+          RAILS_ENV: test
+          DATABASE_URL: postgres://localhost/whats-next_test
 
-    working_directory: ~/repo
+      # Specify service dependencies here if necessary
+      # CircleCI maintains a library of pre-built images
+      # documented at https://circleci.com/docs/2.0/circleci-images/
+      - image: circleci/postgres
+        environment: 
+          POSTGRES_USER: circleci
+          POSTGRES_DB: whats-next_test
+          POSTGRES_PASSWORD: ""
+
+    working_directory: ~/whats-next
 
     steps:
       - checkout
@@ -29,7 +34,9 @@ jobs:
             - v1-dependencies-{{ checksum "Gemfile.lock" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
-
+      - run:
+          name: Install Bundler 2.0
+          command: gem install bundler --version "2.0.1"
       - run:
           name: install dependencies
           command: |
@@ -54,7 +61,6 @@ jobs:
 
             bundle exec rspec \
               --format progress \
-              --format RspecJunitFormatter \
               --out /tmp/test-results/rspec.xml \
               --format progress \
               $TEST_FILES
