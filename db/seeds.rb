@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require './app/models/user'
+
+User.destroy_all
+
+User.create(name: 'User1', password: 'password')
