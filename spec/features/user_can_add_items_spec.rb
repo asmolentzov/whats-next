@@ -4,6 +4,7 @@ describe 'As a user on the site' do
   describe 'on the main page' do
     it 'can add a new item to my Things I Like' do
       user = User.create(name: 'user')
+      allow_any_instance_of(UsersController).to receive(:current_user).and_return(user)
       visit profile_path(user)
       
       expect(page).to have_content('Things I Like')
