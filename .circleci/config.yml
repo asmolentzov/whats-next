@@ -8,11 +8,20 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/ruby:2.4.5-node-browsers
+        environment:
+          PGUSER: circleci
+          PGHOST: 127.0.0.1
+          RAILS_ENV: test
+          DATABASE_URL: postgres://localhost/whats-next_test
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
       - image: circleci/postgres
+        environment: 
+          POSTGRES_USER: circleci
+          POSTGRES_DB: whats-next_test
+          POSTGRES_PASSWORD: ""
 
     working_directory: ~/whats-next
 
