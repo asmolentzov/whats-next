@@ -1,8 +1,38 @@
 <h2>Things I Like</h2>
 
-<div id="books-likes">
+<div id="book-likes">
   <% @books.each do |book| %>
     <%= book.name %>
+  <% end %>
+</div>
+<div id="band-likes">
+  <% @bands.each do |band| %>
+    <%= band.name %>
+  <% end %>
+</div>
+<div id="movie-likes">
+  <% @movies.each do |movie| %>
+    <%= movie.name %>
+  <% end %>
+</div>
+<div id="show-likes">
+  <% @shows.each do |show| %>
+    <%= show.name %>
+  <% end %>
+</div>
+<div id="podcast-likes">
+  <% @podcasts.each do |podcast| %>
+    <%= podcast.name %>
+  <% end %>
+</div>
+<div id="author-likes">
+  <% @authors.each do |author| %>
+    <%= author.name %>
+  <% end %>
+</div>
+<div id="game-likes">
+  <% @games.each do |game| %>
+    <%= game.name %>
   <% end %>
 </div>
 
