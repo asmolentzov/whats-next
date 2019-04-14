@@ -5,4 +5,8 @@ describe Item do
     it { should validate_presence_of(:name) }
     it { should validate_presence_of(:type) }
   end
+  
+  describe 'Relationships' do
+    it { should have_many(:user_items) }
+  end
 end
