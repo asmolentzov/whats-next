@@ -8,7 +8,7 @@ describe 'As a visitor to the site' do
       visit root_path
       
       fill_in :user_name, with: user.name
-      fill_in :user_password, with: user.password
+      fill_in :password, with: user.password
       click_button 'Log In'
       
       expect(current_path).to eq(profile_path)
