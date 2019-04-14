@@ -1,0 +1,14 @@
+<h2>Things I Like</h2>
+
+<div id="books-likes">
+  <% @books.each do |book| %>
+    <%= book.name %>
+  <% end %>
+</div>
+
+<%= form_tag do %>
+  <%= label_tag :item_name %>
+  <%= text_field_tag :item_name %>
+  <%= select_tag :item_type, options_for_select([['band', 0], ['movie', 1], ['show', 2], ['podcast', 3], ['book', 4], ['author', 5], ['game', 6]]) %>
+  <%= submit_tag "Add New" %>
+<% end %>

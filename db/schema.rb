@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2019_04_14_155145) do
 
   create_table "items", force: :cascade do |t|
     t.string "name"
-    t.integer "type"
+    t.integer "item_type"
     t.string "wikipedia_teaser"
     t.string "wikipedia_url"
     t.string "youtube_url"
