@@ -4,7 +4,7 @@ describe RecommendationService do
   it 'can get recommendations' do
     service = RecommendationService.new
     book = Item.create(name: "Harry Potter", item_type: 'book')
-    recs = service.get_recommendations(book)
+    recs = service.get_recommendations(book)[:Similar][:Results]
     
     expect(recs.count).to eq(20)
     expect(recs.first).to have_key(:Name)
