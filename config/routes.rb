@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   post '/', to: 'sessions#create'
   get '/profile', to: 'users#show'
   post '/profile', to: 'user_items#create'
+  get '/search', to: 'search#show'
 end
