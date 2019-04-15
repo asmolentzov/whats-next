@@ -7,15 +7,20 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Roboto:300,400,700" %>
   </head>
 
   <body>
     <nav>
       <h1>What's Next</h1>
-      <% if current_user %>
-        <h5><%= current_user.name %></h5>
-      <% end %>
+      <div class="user-info">
+        <% if current_user %>
+          <h5><%= current_user.name %></h5>
+        <% end %>
+      </div>
     </nav>
-    <%= yield %>
+    <div class="container">  
+      <%= yield %>
+    </div>
   </body>
 </html>
