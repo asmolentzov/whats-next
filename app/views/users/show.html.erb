@@ -1,44 +1,67 @@
-<h2>Things I Like</h2>
+<div class="likes-container">
+  <h2>Things I Like</h2>
 
-<div id="book-likes">
-  <% @books.each do |book| %>
-    <%= book.name %>
-  <% end %>
-</div>
-<div id="band-likes">
-  <% @bands.each do |band| %>
-    <%= band.name %>
-  <% end %>
-</div>
-<div id="movie-likes">
-  <% @movies.each do |movie| %>
-    <%= movie.name %>
-  <% end %>
-</div>
-<div id="show-likes">
-  <% @shows.each do |show| %>
-    <%= show.name %>
-  <% end %>
-</div>
-<div id="podcast-likes">
-  <% @podcasts.each do |podcast| %>
-    <%= podcast.name %>
-  <% end %>
-</div>
-<div id="author-likes">
-  <% @authors.each do |author| %>
-    <%= author.name %>
-  <% end %>
-</div>
-<div id="game-likes">
-  <% @games.each do |game| %>
-    <%= game.name %>
-  <% end %>
-</div>
+  <div class="likes">
+    <h3>Books</h3>
+    <ul id="book-likes">
+      <% @books.each do |book| %>
+        <li><%= book.name %></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="likes">
+    <h3>Bands</h3>
+    <ul id="band-likes">
+      <% @bands.each do |band| %>
+        <li><%= band.name %></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="likes">
+    <h3>Movies</h3>
+    <ul id="movie-likes">
+      <% @movies.each do |movie| %>
+        <li><%= movie.name %></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="likes">
+    <h3>TV Shows</h3>
+    <ul id="show-likes">
+      <% @shows.each do |show| %>
+        <li><%= show.name %></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="likes">
+    <h3>Podcasts</h3>
+    <ul id="podcast-likes">
+      <% @podcasts.each do |podcast| %>
+        <li><%= podcast.name %></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="likes">
+    <h3>Authors</h3>
+    <ul id="author-likes">
+      <% @authors.each do |author| %>
+        <li><%= author.name %></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="likes">
+    <h3>Games</h3>
+    <ul id="game-likes">
+      <% @games.each do |game| %>
+        <li><%= game.name %></li>
+      <% end %>
+    </ul>
+  </div>
 
-<%= form_tag do %>
-  <%= label_tag :item_name %>
-  <%= text_field_tag :item_name %>
-  <%= select_tag :item_type, options_for_select([['band', 0], ['movie', 1], ['show', 2], ['podcast', 3], ['book', 4], ['author', 5], ['game', 6]]) %>
-  <%= submit_tag "Add New" %>
-<% end %>
+  <%= form_tag do %>
+    <%= label_tag :item_name %>
+    <%= text_field_tag :item_name %>
+    <%= select_tag :item_type, options_for_select([['band', 0], ['movie', 1], ['show', 2], ['podcast', 3], ['book', 4], ['author', 5], ['game', 6]]) %>
+    <%= submit_tag "Add New" %>
+  <% end %>
+</div>
