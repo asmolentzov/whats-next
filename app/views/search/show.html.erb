@@ -1,0 +1,8 @@
+<div class="reco-container">
+  <h2>We Think You'll Like</h2>
+  <ul>
+    <% @recommendations.each do |rec| %>
+      <li class="recommendation"><%= rec.name %></li>
+    <% end %>
+  </ul>
+</div>
