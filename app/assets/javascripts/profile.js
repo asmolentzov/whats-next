@@ -2,7 +2,8 @@ $(document).ready(function() {
   $(".rec-button").click(function(event) {
     event.preventDefault();
     const name = $(this.parentElement).contents()[0].textContent.trim();
-    $('#staging-box').children().append(`<li>${name}</li>`)
+    const id = this.parentElement.id.split('-')[1]
+    $('#staging-box').children().append(`<li id="rec-${id}">${name}</li>`)
   })
   
   $(".get-recs-button").click(function(event) {
