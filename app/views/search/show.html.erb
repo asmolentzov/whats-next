@@ -1,10 +1,12 @@
 <%= render "users/user_likes" %>
-<%= render "users/recs_container" %>
-<div class="reco-container">
-  <h2>We Think You'll Like</h2>
-  <ul>
-    <% @facade.recommendations.each do |rec| %>
-      <li class="recommendation"><%= rec.name %></li>
-    <% end %>
-  </ul>
+<div class="all-recommendations">
+  <%= render "users/recs_container" %>
+  <div class="reco-container">
+    <h2>We Think You'll Like</h2>
+    <ul>
+      <% @facade.recommendations.each do |rec| %>
+        <li class="recommendation"><%= rec.name %></li>
+      <% end %>
+    </ul>
+  </div>
 </div>

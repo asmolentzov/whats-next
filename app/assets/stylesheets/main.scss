@@ -41,6 +41,7 @@ li {
   margin: 2rem;
   display: flex;
   justify-content: space-between;
+  height: 79vh;
 }
 
 .likes-container {
@@ -84,6 +85,15 @@ li {
   &:hover {
     background-color: #e83a79;
   }
+}
+
+.all-recommendations {
+  margin: 2rem;
+}
+
+.reco-container {
+  max-height: 45vh;
+  overflow: scroll;
 }
 
 #staging-box {
