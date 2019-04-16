@@ -26,10 +26,12 @@ h1 {
 
 .container {
   margin: 2rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .likes-container {
-  max-width: 40rem;
+  width: 40rem;
 }
 
 .likes {
@@ -42,6 +44,30 @@ h1 {
     list-style-type: none;
   }
   li {
-    margin-top: 0.25rem;
+    margin-top: 0.5rem;
   }
+}
+
+.rec-button {
+  float: right;
+  background-color: #2ca58d;
+  font-size: 8pt;
+  font-weight: bold;
+  padding: 0.3rem;
+  margin-right: 1rem;
+  border-radius: 0.5rem;
+  a {
+    color: #0a2342;
+    text-decoration: none;
+  }
+  &:hover {
+    background-color: #f46197;
+  }
+}
+
+.recs-container {
+  height: 10rem;
+  border: 5px solid #0a2342;
+  width: 30rem;
+  margin: 6rem;
 }
