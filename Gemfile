@@ -60,6 +60,7 @@ group :test do
   gem 'webmock'
   gem 'selenium-webdriver'
   gem 'webdrivers', '~> 3.0'
+  gem 'simplecov', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
