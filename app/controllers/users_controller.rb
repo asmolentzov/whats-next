@@ -7,5 +7,6 @@ class UsersController < ApplicationController
     @podcasts = current_user.items.where(item_type: :podcast)
     @authors = current_user.items.where(item_type: :author)
     @games = current_user.items.where(item_type: :game)
+    @music = current_user.items.where(item_type: :music)
   end
 end

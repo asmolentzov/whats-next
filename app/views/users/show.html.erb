@@ -57,6 +57,14 @@
       <% end %>
     </ul>
   </div>
+  <div class="likes">
+    <h3>Music</h3>
+    <ul id="music-likes">
+      <% @music.each do |music| %>
+        <li id="item-<%= music.id %>"><%= music.name %> <span class="rec-button"><a href="">Get Recommendation</a></span></li>
+      <% end %>
+    </ul>
+  </div>
 
   <%= form_tag do %>
     <%= label_tag :item_name %>
