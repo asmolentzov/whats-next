@@ -11,6 +11,6 @@ class SearchFacade
   end
   
   def raw_recommendations
-    RecommendationService.new.get_recommendations(@items.first)[:Similar][:Results]
+    RecommendationService.new.get_recommendations(@items)[:Similar][:Results]
   end
 end
