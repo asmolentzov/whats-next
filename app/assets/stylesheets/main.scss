@@ -29,6 +29,14 @@ a {
   color: #0a2342;
 }
 
+ul {
+  list-style-type: none;
+}
+
+li {
+  margin-top: 0.5rem;
+}
+
 .container {
   margin: 2rem;
   display: flex;
@@ -44,12 +52,6 @@ a {
     margin: 0;
     padding: 0.25rem 0 0.25rem 1rem;
     background-color: #84bc9c;
-  }
-  ul {
-    list-style-type: none;
-  }
-  li {
-    margin-top: 0.5rem;
   }
 }
 
@@ -67,14 +69,13 @@ a {
 }
 
 .recs-container {
-  margin: 5rem;
+  margin: 0 5rem;
 }
 
 .get-recs-button {
-  height: 3rem;
   width: 16rem;
   margin: 1rem 0 1rem 6rem;
-  padding: 2.2rem 2rem 0.5rem 2rem;
+  padding: 1rem;
   border-radius: 1rem;
   background-color: #f46197;
   text-align: center;
@@ -86,7 +87,8 @@ a {
 }
 
 #staging-box {
-  height: 10rem;
+  height: 8rem;
   border: 5px solid #0a2342;
   width: 30rem;
+  overflow: scroll;
 }
