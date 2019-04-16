@@ -1,8 +1,8 @@
 <%= render "users/user_likes" %>
 <div class="all-recommendations">
   <%= render "users/recs_container" %>
+  <h2>We Think You'll Like</h2>
   <div class="reco-container">
-    <h2>We Think You'll Like</h2>
     <ul>
       <% @facade.recommendations.each do |rec| %>
         <li class="recommendation"><%= rec.name %></li>
