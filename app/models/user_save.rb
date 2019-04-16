@@ -1,0 +1,3 @@
+class UserSave < ApplicationRecord
+  
+end
