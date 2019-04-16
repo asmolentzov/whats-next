@@ -9,5 +9,7 @@ describe User do
   describe 'Relationships' do
     it { should have_many(:user_items) }
     it {should have_many(:items).through(:user_items) }
+    it { should have_many(:user_likes) }
+    it { should have_many(:likes).through(:user_likes) }
   end
 end

@@ -33,13 +33,13 @@ ActiveRecord::Schema.define(version: 2019_04_16_202333) do
     t.index ["user_id"], name: "index_user_items_on_user_id"
   end
 
-  create_table "user_saves", force: :cascade do |t|
+  create_table "user_likes", force: :cascade do |t|
     t.bigint "user_id"
-    t.bigint "item_id"
+    t.bigint "like_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["item_id"], name: "index_user_saves_on_item_id"
-    t.index ["user_id"], name: "index_user_saves_on_user_id"
+    t.index ["like_id"], name: "index_user_likes_on_like_id"
+    t.index ["user_id"], name: "index_user_likes_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -51,6 +51,4 @@ ActiveRecord::Schema.define(version: 2019_04_16_202333) do
 
   add_foreign_key "user_items", "items"
   add_foreign_key "user_items", "users"
-  add_foreign_key "user_saves", "items"
-  add_foreign_key "user_saves", "users"
 end
