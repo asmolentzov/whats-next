@@ -1,8 +1,8 @@
 class RecommendationService
-  def get_recommendations(item)
+  def get_recommendations(items)
     response = conn.get('/api/similar') do |faraday|
       faraday.params[:info] = 1
-      faraday.params[:q] = "#{item.item_type}:#{item.name}"
+      faraday.params[:q] = query_params(items)
     end
     JSON.parse(response.body, symbolize_names: true)
   end
@@ -14,5 +14,11 @@ class RecommendationService
       faraday.params[:k] = ENV['TASTEDIVE_API_KEY']
       faraday.adapter Faraday.default_adapter
     end
+  end
+  
+  def query_params(items)
+    items.map do |item|
+      "#{item.item_type}:#{item.name}"
+    end.join(',')
   end
 end

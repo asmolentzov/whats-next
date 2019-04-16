@@ -24,9 +24,9 @@ describe 'As a user on the site' do
       visit profile_path
 
       fill_in :item_name, with: 'red hot chili peppers'
-      select 'band', from: 'item_type'
+      select 'music', from: 'item_type'
       click_button 'Add New'
-      within "#band-likes" do
+      within "#music-likes" do
         expect(page).to have_content('Red Hot Chili Peppers')
       end
       
