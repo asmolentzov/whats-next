@@ -10,10 +10,10 @@
     </ul>
   </div>
   <div class="likes">
-    <h3>Bands</h3>
-    <ul id="band-likes">
-      <% @bands.each do |band| %>
-        <li id="item-<%= band.id %>"><%= band.name %> <span class="rec-button"><a href="">Get Recommendation</a></span></li>
+    <h3>Music</h3>
+    <ul id="music-likes">
+      <% @music.each do |music| %>
+        <li id="item-<%= music.id %>"><%= music.name %> <span class="rec-button"><a href="">Get Recommendation</a></span></li>
       <% end %>
     </ul>
   </div>
@@ -57,19 +57,11 @@
       <% end %>
     </ul>
   </div>
-  <div class="likes">
-    <h3>Music</h3>
-    <ul id="music-likes">
-      <% @music.each do |music| %>
-        <li id="item-<%= music.id %>"><%= music.name %> <span class="rec-button"><a href="">Get Recommendation</a></span></li>
-      <% end %>
-    </ul>
-  </div>
 
   <%= form_tag do %>
     <%= label_tag :item_name %>
     <%= text_field_tag :item_name %>
-    <%= select_tag :item_type, options_for_select([['band', 0], ['movie', 1], ['show', 2], ['podcast', 3], ['book', 4], ['author', 5], ['game', 6]]) %>
+    <%= select_tag :item_type, options_for_select([['music', 0], ['movie', 1], ['show', 2], ['podcast', 3], ['book', 4], ['author', 5], ['game', 6]]) %>
     <%= submit_tag "Add New" %>
   <% end %>
 </div>

@@ -3,5 +3,5 @@ class Item < ApplicationRecord
   
   has_many :user_items
   
-  enum item_type: [:band, :movie, :show, :podcast, :book, :author, :game, :music]
+  enum item_type: [:music, :movie, :show, :podcast, :book, :author, :game]
 end
