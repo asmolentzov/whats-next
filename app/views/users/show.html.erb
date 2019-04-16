@@ -5,7 +5,7 @@
     <h3>Books</h3>
     <ul id="book-likes">
       <% @books.each do |book| %>
-        <li id="item-<%= book.id %>"><%= book.name %> <%= button_to 'Get Recommendation' %></li>
+        <li id="item-<%= book.id %>"><%= book.name %> <span class="rec-button">Get Recommendation</span></li>
       <% end %>
     </ul>
   </div>
@@ -13,7 +13,7 @@
     <h3>Bands</h3>
     <ul id="band-likes">
       <% @bands.each do |band| %>
-        <li id="item-<%= band.id %>"><%= band.name %> <%= button_to 'Get Recommendation' %></li>
+        <li id="item-<%= band.id %>"><%= band.name %> <span class="rec-button">Get Recommendation</span></li>
       <% end %>
     </ul>
   </div>
@@ -21,7 +21,7 @@
     <h3>Movies</h3>
     <ul id="movie-likes">
       <% @movies.each do |movie| %>
-        <li id="item-<%= movie.id %>"><%= movie.name %> <%= button_to 'Get Recommendation' %></li>
+        <li id="item-<%= movie.id %>"><%= movie.name %> <span class="rec-button">Get Recommendation</span></li>
       <% end %>
     </ul>
   </div>
@@ -29,7 +29,7 @@
     <h3>TV Shows</h3>
     <ul id="show-likes">
       <% @shows.each do |show| %>
-        <li id="item-<%= show.id %>"><%= show.name %> <%= button_to 'Get Recommendation' %></li>
+        <li id="item-<%= show.id %>"><%= show.name %> <span class="rec-button">Get Recommendation</span></li>
       <% end %>
     </ul>
   </div>
@@ -37,7 +37,7 @@
     <h3>Podcasts</h3>
     <ul id="podcast-likes">
       <% @podcasts.each do |podcast| %>
-        <li id="item-<%= podcast.id %>"><%= podcast.name %> <%= button_to 'Get Recommendation' %></li>
+        <li id="item-<%= podcast.id %>"><%= podcast.name %> <span class="rec-button">Get Recommendation</span></li>
       <% end %>
     </ul>
   </div>
@@ -45,7 +45,7 @@
     <h3>Authors</h3>
     <ul id="author-likes">
       <% @authors.each do |author| %>
-        <li id="item-<%= author.id %>"><%= author.name %> <%= button_to 'Get Recommendation' %></li>
+        <li id="item-<%= author.id %>"><%= author.name %> <span class="rec-button">Get Recommendation</span></li>
       <% end %>
     </ul>
   </div>
@@ -53,7 +53,7 @@
     <h3>Games</h3>
     <ul id="game-likes">
       <% @games.each do |game| %>
-        <li id="item-<%= game.id %>"><%= game.name %> <%= button_to 'Get Recommendation' %></li>
+        <li id="item-<%= game.id %>"><%= game.name %> <span class="rec-button">Get Recommendation</span></li>
       <% end %>
     </ul>
   </div>
