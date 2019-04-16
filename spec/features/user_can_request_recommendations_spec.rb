@@ -26,9 +26,9 @@ describe 'As a user' do
       end
       
       expect(current_path).to eq(search_path)
-      within '.reco-container' do
+      within ".reco-container" do
         expect(page).to have_content("We Think You'll Like")
-        expect(page).to have_css("recommendation", count: 20)
+        expect(page).to have_css(".recommendation", count: 20)
         expect(page).to have_content('My Neighbor Totoro')
         expect(page).to have_content('Princess Mononoke')
       end
