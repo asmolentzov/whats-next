@@ -5,7 +5,7 @@
     <h3>Books</h3>
     <ul id="book-likes">
       <% @books.each do |book| %>
-        <li id="item-<%= book.id %>"><%= book.name %> <span class="rec-button">Get Recommendation</span></li>
+        <li id="item-<%= book.id %>"><%= book.name %> <span class="rec-button"><a href="">Get Recommendation</a></span></li>
       <% end %>
     </ul>
   </div>

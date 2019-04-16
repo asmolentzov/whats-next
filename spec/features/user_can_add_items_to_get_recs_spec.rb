@@ -9,7 +9,7 @@ describe 'As a user' do
       visit profile_path
       
       within "#item-#{hp.id}" do
-        click_button 'Get Recommendation'
+        click_on 'Get Recommendation'
       end
       
       within "#staging-box" do

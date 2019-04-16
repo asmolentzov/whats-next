@@ -54,6 +54,10 @@ h1 {
   padding: 0.3rem;
   margin-right: 1rem;
   border-radius: 0.5rem;
+  a {
+    color: #0a2342;
+    text-decoration: none;
+  }
   &:hover {
     background-color: #f46197;
   }
