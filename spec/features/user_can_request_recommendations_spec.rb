@@ -8,7 +8,7 @@ describe 'As a user' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       visit search_path(query: hp.id)
       
-      within ".reco-container" do
+      within ".all-recommendations" do
         expect(page).to have_content("We Think You'll Like")
         expect(page).to have_css(".recommendation", count: 20)
       end
@@ -27,7 +27,7 @@ describe 'As a user' do
       end
       
       expect(current_path).to eq(search_path)
-      within ".reco-container" do
+      within ".all-recommendations" do
         expect(page).to have_content("We Think You'll Like")
         expect(page).to have_css(".recommendation", count: 20)
         expect(page).to have_content('My Neighbor Totoro')
@@ -52,7 +52,7 @@ describe 'As a user' do
       end
       
       expect(current_path).to eq(search_path)
-      within ".reco-container" do
+      within ".all-recommendations" do
         expect(page).to have_content("We Think You'll Like")
         expect(page).to have_css(".recommendation", count: 20)
         expect(page).to have_content('My Neighbor Totoro')
