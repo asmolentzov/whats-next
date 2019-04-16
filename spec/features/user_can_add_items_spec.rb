@@ -5,7 +5,7 @@ describe 'As a user on the site' do
     it 'can add a new item to my Things I Like' do
       user = User.create(name: 'user', password: 'pass')
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
-      visit profile_path(user)
+      visit profile_path
       
       expect(page).to have_content('Things I Like')
       expect(page).to_not have_content('The Golden Compass')
