@@ -9,6 +9,9 @@ require 'webmock/rspec'
 require 'vcr'
 require 'selenium-webdriver'
 require 'webdrivers'
+require 'simplecov'
+
+SimpleCov.start
 
 VCR.configure do |config|
   config.configure_rspec_metadata!
