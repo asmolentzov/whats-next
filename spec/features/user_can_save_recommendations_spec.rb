@@ -12,7 +12,8 @@ describe 'As a user' do
       within "#recommendation-#{item.id}" do
         click_on 'Save'
       end
-      expect(UserLike.last.item).to eq(item)
+      sleep(1) # Added so that the database call gets a chance to execute
+      expect(UserLike.last.like).to eq(item)
     end
   end
 end
