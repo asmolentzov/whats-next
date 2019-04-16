@@ -1,5 +1,5 @@
 class SearchController < ApplicationController
   def show
-    @facade = SearchFacade.new
+    @facade = SearchFacade.new(params[:query])
   end
 end
