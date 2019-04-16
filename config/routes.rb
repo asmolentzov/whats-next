@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   get '/profile', to: 'users#show'
   post '/profile', to: 'user_items#create'
   get '/search', to: 'search#show'
+  
+  resources :user_likes, only: [:create]
 end
