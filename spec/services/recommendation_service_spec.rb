@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe RecommendationService do
-  it 'can get recommendations' do
+  it 'can get recommendations', :vcr do
     service = RecommendationService.new
     book = Item.create(name: "Harry Potter", item_type: 'book')
     recs = service.get_recommendations(book)[:Similar][:Results]
