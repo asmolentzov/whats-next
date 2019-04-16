@@ -5,7 +5,7 @@
   <div class="reco-container">
     <ul>
       <% @facade.recommendations.each do |rec| %>
-        <li class="recommendation"><%= rec.name %></li>
+        <li class="recommendation" id="recommendation-<%= rec.id %>"><%= rec.name %><span class="save-button"><a href="">Save</a></span></li>
       <% end %>
     </ul>
   </div>
