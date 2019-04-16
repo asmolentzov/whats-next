@@ -26,10 +26,12 @@ h1 {
 
 .container {
   margin: 2rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .likes-container {
-  max-width: 40rem;
+  width: 40rem;
 }
 
 .likes {
@@ -61,4 +63,11 @@ h1 {
   &:hover {
     background-color: #f46197;
   }
+}
+
+.recs-container {
+  height: 10rem;
+  border: 5px solid #0a2342;
+  width: 30rem;
+  margin: 6rem;
 }
