@@ -56,7 +56,8 @@ li {
   }
 }
 
-.rec-button {
+.rec-button, 
+.save-button {
   float: right;
   background-color: #2ca58d;
   font-size: 8pt;
@@ -67,6 +68,11 @@ li {
   &:hover {
     background-color: #f46197;
   }
+}
+
+.save-button {
+  margin-right: 10rem;
+  padding: 0.3rem 0.75rem;
 }
 
 .recs-container {
