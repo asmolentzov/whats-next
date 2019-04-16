@@ -8,9 +8,9 @@ $(document).ready(function() {
   
   $(".get-recs-button").click(function(event) {
     event.preventDefault();
-    const items = Array.from($('#items-for-recs').children()).map(child => {
-       return child.textContent;
+    const itemIds = Array.from($('#items-for-recs').children()).map(child => {
+       return (child.id).split('-')[1];
      });
-    window.location.href = `/search?query=${items.join(',')}`
+    window.location.href = `/search?query=${itemIds.join(',')}`
   })
 })
