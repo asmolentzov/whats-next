@@ -11,12 +11,23 @@ $(document).ready(function() {
   
   $(".saved-button").click(function(event) {
     event.preventDefault();
-    fetch('/user_likes')
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(items) {
-      console.log(JSON.stringify(items))
-    })
+    const items = fetch_items()
+      .then(html => {
+        $('.items-container').html(html)
+      })
   })
 })
+
+const fetch_items = () => {
+  return fetch('/user_likes')
+  .then(function(response) {
+    return response.json();
+  })
+  .then(items => {
+    let itemsHtml = '<div class="saved-items"><ul>';
+    items.forEach(item => {
+      itemsHtml += `<li id="saved-${item.id}">${item.name}</li>`
+    })
+    return itemsHtml + '</ul></div>'
+  })
+}
