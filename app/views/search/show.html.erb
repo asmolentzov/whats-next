@@ -5,10 +5,61 @@
   <%= render "users/recs_container" %>
   <h2>We Think You'll Like</h2>
   <div class="reco-container">
-    <ul>
-      <% @facade.recommendations.each do |rec| %>
-        <li class="recommendation" id="recommendation-<%= rec.id %>"><%= rec.name %><span class="save-button"><a href="">Save</a></span></li>
-      <% end %>
-    </ul>
+    <div class="likes">
+      <h3>Books</h3>
+      <ul>
+        <% @facade.get_item_type('book').each do |book| %>
+          <li class="recommendation" id="recommendation-<%= book.id %>"><%= book.name %><span class="save-button"><a href="">Save</a></span></li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="likes">
+      <h3>Music</h3>
+      <ul>
+        <% @facade.get_item_type('music').each do |music| %>
+          <li class="recommendation" id="recommendation-<%= music.id %>"><%= music.name %><span class="save-button"><a href="">Save</a></span></li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="likes">
+      <h3>Movies</h3>
+      <ul>
+        <% @facade.get_item_type('movie').each do |movie| %>
+          <li class="recommendation" id="recommendation-<%= movie.id %>"><%= movie.name %><span class="save-button"><a href="">Save</a></span></li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="likes">
+      <h3>TV Shows</h3>
+      <ul>
+        <% @facade.get_item_type('show').each do |show| %>
+          <li class="recommendation" id="recommendation-<%= show.id %>"><%= show.name %><span class="save-button"><a href="">Save</a></span></li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="likes">
+      <h3>Podcasts</h3>
+      <ul>
+        <% @facade.get_item_type('podcast').each do |podcast| %>
+          <li class="recommendation" id="recommendation-<%= podcast.id %>"><%= podcast.name %><span class="save-button"><a href="">Save</a></span></li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="likes">
+      <h3>Authors</h3>
+      <ul>
+        <% @facade.get_item_type('author').each do |author| %>
+          <li class="recommendation" id="recommendation-<%= author.id %>"><%= author.name %><span class="save-button"><a href="">Save</a></span></li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="likes">
+      <h3>Games</h3>
+      <ul>
+        <% @facade.get_item_type('game').each do |game| %>
+          <li class="recommendation" id="recommendation-<%= game.id %>"><%= game.name %><span class="save-button"><a href="">Save</a></span></li>
+        <% end %>
+      </ul>
+    </div>
   </div>
 </div>
