@@ -1,7 +1,9 @@
 # What's Next?
 What's Next is a solo project for Module 4 of the [Back-End Engineering Program](https://turing.io/programs/back-end-engineering/) at the [Turing School of Software & Design](https://turing.io/). The project specifications can be found [here](http://backend.turing.io/module4/projects/take_home_challenge/take_home_challenge_spec). I was tasked with creating a recommendations app using the [TasteDive API](https://tastedive.com/read/api). 
 
-You can access the project in production here! [What's Next](https://quiet-cove-38152.herokuapp.com/profile)
+You can access the project in production here! [What's Next](https://quiet-cove-38152.herokuapp.com/) 
+
+Please use `User1` as a username and `password` as the password until authentication is fully deployed. 
 
 The project board is available [here](https://github.com/asmolentzov/whats-next/projects/1).
 
@@ -14,7 +16,7 @@ What's Next users can add movies, books, music, TV shows, podcasts, authors, or 
 
 A user can then save those recommendations to their "Things To Check Out" section, giving them a list of things to check out in the future! 
 
-What's Next is [deployed on Heroku](https://quiet-cove-38152.herokuapp.com/profile) and uses [CircleCI](https://circleci.com/gh/asmolentzov/whats-next) for continuous integration.
+What's Next is [deployed on Heroku](https://quiet-cove-38152.herokuapp.com/) and uses [CircleCI](https://circleci.com/gh/asmolentzov/whats-next) for continuous integration.
 
 ## Schema Design
 The schema is based on the `users` and the `items` tables. There are two joins tables: `user_items` and `user_likes`. This is so that items that a user has said they have read or watched and like are saved as `user_items`, while items that a user is interested in and want to save as a "Thing To Check Out" are saved as `user_likes`. 
@@ -63,8 +65,9 @@ rails s
 ```
 Once running, point your browser to: 
 ```
-http://localhost:3000/profile
+http://localhost:3000/
 ```
+And log in using the user from the seed data.
 
 ## How to Contribute
 If you wish to contribute to this repo, you are welcome to make a PR and I would be happy to review it. 
