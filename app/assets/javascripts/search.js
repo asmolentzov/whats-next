@@ -7,5 +7,16 @@ $(document).ready(function() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ "id": itemId })
     })
+  });
+  
+  $(".saved-button").click(function(event) {
+    event.preventDefault();
+    fetch('/user_likes')
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(items) {
+      console.log(JSON.stringify(items))
+    })
   })
 })
