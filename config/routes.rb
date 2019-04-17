@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   post '/profile', to: 'user_items#create'
   get '/search', to: 'search#show'
   
-  resources :user_likes, only: [:create]
+  resources :user_likes, only: [:index, :create]
 end

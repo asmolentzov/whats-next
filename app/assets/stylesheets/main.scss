@@ -20,7 +20,7 @@ nav {
 h1 {
   text-transform: uppercase;
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 100;
   margin-left: 1rem;
 }
 
@@ -53,6 +53,7 @@ li {
     margin: 0;
     padding: 0.25rem 0 0.25rem 1rem;
     background-color: #84bc9c;
+    font-weight: 100;
   }
 }
 
@@ -105,6 +106,27 @@ li {
 .reco-container {
   max-height: 45vh;
   overflow: scroll;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #0a2342;
+  a {
+    border-top-right-radius: 2rem; 
+    background-color: #84bc9c;
+    &:hover {
+      background-color: #2ca58d;
+    }
+  }
+  h2 {
+    font-weight: 100;
+  }
+}
+
+.likes-button, 
+.saved-button {
+  padding: 0 1rem;
+  border-right: 1px solid #0a2342;
 }
 
 #staging-box {
