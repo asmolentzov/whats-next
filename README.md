@@ -10,7 +10,11 @@ The project board is available [here](https://github.com/asmolentzov/whats-next/
 ## Features
 What's Next users can add movies, books, music, TV shows, podcasts, authors, or games to their "Things I Like". When they want to see some recommendations on things that might be similar, they can add an item to the Get Recommendations box and click to Get Recommendations! 20 items that are related to the chosen items are displayed.
 
+![Recommendations](readme_images/recommendations.png)
+
 A user can then save those recommendations to their "Things To Check Out" section, giving them a list of things to check out in the future! 
+
+What's Next is [deployed on Heroku](https://quiet-cove-38152.herokuapp.com/profile) and uses [CircleCI](https://circleci.com/gh/asmolentzov/whats-next) for continuous integration.
 
 ## Schema Design
 The schema is based on the `users` and the `items` tables. There are two joins tables: `user_items` and `user_likes`. This is so that items that a user has said they have read or watched and like are saved as `user_items`, while items that a user is interested in and want to save as a "Thing To Check Out" are saved as `user_likes`. 
@@ -76,6 +80,8 @@ If you wish to contribute to this repo, you are welcome to make a PR and I would
 * [vcr](https://github.com/vcr/vcr)
 * [selenium-webdriver](https://www.seleniumhq.org/projects/webdriver)
 * [webdrivers](https://github.com/titusfortner/webdrivers)
+* [CircleCI](https://circleci.com/gh/asmolentzov/whats-next)
+* [Heroku](https://heroku.com/)
 * [TasteDive API](https://tastedive.com/read/api)
 * [GitHub Projects for Project Management](https://help.github.com/articles/about-project-boards/)
 
